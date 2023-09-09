@@ -1,5 +1,4 @@
 {
-  "buildCommand": "npm i && cd client && npm i && npm run build",
   "outputDirectory": "client/build",
   "rewrites": [{ "source": "/api/(.*)", "destination": "/api/index.js" }]
 }
