@@ -48,10 +48,10 @@ export default function PlaceGallery({ place }) {
       <div className="grid gap-2 grid-cols-[2fr_1fr] rounded-3xl overflow-hidden">
         <div>
           {place.photos?.[0] && (
-            <div>
+            <div className="w-full h-full">
               <Image
                 onClick={() => setShowAllPhotos(true)}
-                className="cursor-pointer aspect-square object-cover"
+                className="cursor-pointer w-full h-full object-cover"
                 src={place.photos[0]}
                 alt=""
               />
@@ -59,22 +59,28 @@ export default function PlaceGallery({ place }) {
           )}
         </div>
         <div className="grid">
-          {place.photos?.[1] && (
-            <Image
-              onClick={() => setShowAllPhotos(true)}
-              className="cursor-pointer aspect-square object-cover"
-              src={place.photos[1]}
-              alt=""
-            />
-          )}
+          <div>
+            {place.photos?.[1] && (
+              <div className="w-full h-full">
+                <Image
+                  onClick={() => setShowAllPhotos(true)}
+                  className="cursor-pointer w-full h-full object-cover"
+                  src={place.photos[1]}
+                  alt=""
+                />
+              </div>
+            )}
+          </div>
           <div className="overflow-hidden">
             {place.photos?.[2] && (
-              <Image
-                onClick={() => setShowAllPhotos(true)}
-                className="cursor-pointer aspect-square object-cover relative top-2"
-                src={place.photos[2]}
-                alt=""
-              />
+              <div className="w-full h-full">
+                <Image
+                  onClick={() => setShowAllPhotos(true)}
+                  className="cursor-pointer w-full h-full object-cover relative top-2"
+                  src={place.photos[2]}
+                  alt=""
+                />
+              </div>
             )}
           </div>
         </div>
