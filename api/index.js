@@ -26,7 +26,7 @@ app.use("/uploads", express.static(__dirname + "/uploads"));
 app.use(
   cors({
     credentials: true,
-    origin: "https://fullstack-booking-app-mern-enesceman.vercel.app",
+    origin: "http://localhost:3000",
   })
 );
 
